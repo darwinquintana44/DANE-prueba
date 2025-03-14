@@ -1,0 +1,18 @@
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+  <h2 class="text-center mb-4">Login</h2>
+  <div class="field col-12 mb-3">
+    <p-floatlabel variant="in">
+      <input id="usuario" pInputText formControlName="usuario" class="w-full"  />
+      <label for="usuario"><span class="pi pi-user"></span> Usuario</label>
+    </p-floatlabel>
+  </div>
+  <div class="field col-12 mb-3">
+    <p-floatlabel variant="in">
+      <p-password formControlName="password" id="password" class="password-full" [feedback]="false" [toggleMask]="true"></p-password>
+      <label for="password"><span class="pi pi-lock"></span> Contraseña</label>
+    </p-floatlabel>
+  </div>
+  <div class="flex justify-content-center">
+    <button pButton type="submit" label="Entrar" class="p-mt-2"></button>
+  </div>
+</form>

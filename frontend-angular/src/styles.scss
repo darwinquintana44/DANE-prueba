@@ -1,1 +1,106 @@
-/* You can add global styles to this file, and also import other style files */
+//@import "primeicons/primeicons.css";
+//@import "primeflex/primeflex.scss";
+
+
+/* Aplicar Lato Black a los títulos */
+h1, h2, h3, h4, h5, h6, .titulo_psigma {
+  font-family: 'Lato', sans-serif;
+  /*font-weight: 900; !* Lato Black *!*/
+}
+
+/* Aplicar Lato Regular a los demás textos */
+body, p, a, span, li, .contenido_psigma {
+  font-family: 'Lato', sans-serif;
+  /*font-weight: 400; !* Lato Regular *!*/
+}
+
+body.authenticated {
+  //background-image: url('/assets/images/FONDOS-ENTORNO.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: auto;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: auto;
+}
+
+/* Fondo del login */
+.login-container {
+  //background-image: url('/assets/images/bg-01.jpg'); /* Reemplaza con la ruta correcta */
+  background-color: gray;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden; /* Garantiza que no haya scroll */
+}
+
+/* Logo en la parte superior derecha */
+.logo-top-right {
+  position: absolute;
+  top: 20px; /* Distancia desde la parte superior */
+  right: 20px; /* Distancia desde la parte derecha */
+  width: 80px; /* Tamaño del logo, ajusta según necesidad */
+  z-index: 10; /* Asegura que esté por delante de otros elementos */
+}
+
+/* Tarjeta del formulario */
+.card {
+  background-color: beige; /* Fondo blanco con 60% de opacidad */
+  backdrop-filter: blur(8px); /* Efecto de desenfoque del fondo */
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+  margin-left: auto; /* Empuja la tarjeta hacia la derecha */
+  margin-right: 4rem; /* Margen a la derecha */
+  width: 40%; /* Ancho ajustado */
+}
+
+/* Asegurar que el contenedor del p-password tenga 100% de ancho */
+.password-full {
+  display: flex;
+  width: 100%;
+}
+
+/* Forzar que el input interno de PrimeNG tenga ancho completo */
+.password-full .p-inputtext {
+  width: 100% !important;
+  box-sizing: border-box; /* Incluir padding y borde en el cálculo */
+}
+
+/* Ajustar estilos del contenedor p-password */
+.password-full .p-password {
+  display: block;
+  width: 100%;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+  .responsive-card {
+    width: 90%; /* Tarjeta ocupa casi todo el ancho */
+    margin: auto; /* Centrado */
+  }
+
+  .logo-top-right {
+    width: 80px; /* Reducir el tamaño del logo */
+  }
+}
+
+@media (max-width: 480px) {
+  .responsive-card {
+    width: 95%; /* Más espacio para pantallas muy pequeñas */
+    margin: auto; /* Centrado */
+  }
+
+  .logo-top-right {
+    width: 60px;
+  }
+}

@@ -3,15 +3,22 @@ import { CommonModule } from '@angular/common';
 
 import { AuthRoutingModule } from './auth-routing.module';
 import { AuthComponent } from './auth.component';
+import { LoginComponent } from './pages/login/login.component';
+import { ReactiveFormsModule} from '@angular/forms';
+import {PrimeNgModule} from '../prime-ng/prime-ng.module';
+
 
 
 @NgModule({
   declarations: [
-    AuthComponent
+    AuthComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+    ReactiveFormsModule,
+    PrimeNgModule
   ]
 })
 export class AuthModule { }
